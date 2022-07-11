@@ -27,7 +27,7 @@ export default function Banner() {
                                     <div className="sc_banner_V3_left">
                                         <h2 className="wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.6s"
                                             style={{visibility: "visible", animationDuration: "0.6s", animationDelay: "0.4s", animationName: "fadeInUp"}}>
-                                            <span className="text-glitch">FBS DeFi</span><br />is a decentralized financial
+                                            <span className="text-glitch">XGA</span><br />is a decentralized application challage for earn, NFT, Metaver, financial
                                             <span>
                                                 <img src={dollar}
                                                     alt="" className="img-fluid" />

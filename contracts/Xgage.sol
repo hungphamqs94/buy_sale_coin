@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract Xgage is ERC20, Ownable  {
     
-    constructor() ERC20("Xgage", "XGE") {
-        _mint(msg.sender, 1000000000*10e18);
+    constructor() ERC20("Xgage", "XGA") {
+        _mint(msg.sender, 100000000*10e18);
     }
 }

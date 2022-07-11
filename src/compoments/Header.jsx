@@ -21,7 +21,7 @@ export default function Header() {
         if (accounts.length !== 0) {
           const account = accounts[0];
           console.log("Found an authorized account: ", account);
-        //   setCurrentAccount(account);
+          setCurrentAccount(account);
         } else {
           console.log("No authorized account found");
         }
@@ -47,6 +47,8 @@ export default function Header() {
         checkWalletIsConnected();
     }, [])
 
+    
+    
     return (
         <header id="gamfi-header" className="gamfi-header-section transparent-header">
                     <div className="menu-area menu-sticky">
@@ -114,14 +116,15 @@ export default function Header() {
                                             </ul>
                                         </li>
                                         <li>
-                                            <button type="button" className="readon white-btn hover-shape btnConnectWallet"
-                                                data-bs-toggle="modal" data-bs-target="#WalletConnect">
+                                          {currentAccount?<p style={{marginTop: '25px', color: 'red'}}>{currentAccount}</p>:<button type="button" className="btnConnectWallet readon black-shape-big connectWalletBtnforMobile"
+                                            data-bs-toggle="modal" data-bs-target="#WalletConnect">
                                                 <img src={imageConnect} alt="Icon" />
                                                 <span className="btn-text" onClick={connectWalletHandler}>Connect </span>
                                                 <span className="hover-shape1"></span>
                                                 <span className="hover-shape2"></span>
                                                 <span className="hover-shape3"></span>
-                                            </button>
+                                            </button>}
+                                           
                                         </li>
                                     </ul>
                                 </div>
@@ -175,14 +178,14 @@ export default function Header() {
                                 </ul>
                             </li>
                             <li>
-                                <button type="button" className="btnConnectWallet readon black-shape-big connectWalletBtnforMobile"
-                                    data-bs-toggle="modal" data-bs-target="#WalletConnect">
-                                    <img src={imageConnect} alt="Icon" />
-                                    <span className="btn-text" onClick={connectWalletHandler}>Connect </span>
-                                    <span className="hover-shape1"></span>
-                                    <span className="hover-shape2"></span>
-                                    <span className="hover-shape3"></span>
-                                </button>
+                            {currentAccount?<p style={{marginTop: '25px', color: 'red'}}>{currentAccount}</p>:<button type="button" className="btnConnectWallet readon black-shape-big connectWalletBtnforMobile"
+                                            data-bs-toggle="modal" data-bs-target="#WalletConnect">
+                                                <img src={imageConnect} alt="Icon" />
+                                                <span className="btn-text" onClick={connectWalletHandler}>Connect </span>
+                                                <span className="hover-shape1"></span>
+                                                <span className="hover-shape2"></span>
+                                                <span className="hover-shape3"></span>
+                                            </button>}
                             </li>
                         </ul>
                     </nav>
