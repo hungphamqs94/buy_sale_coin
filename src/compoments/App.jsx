@@ -1,56 +1,26 @@
 import React from 'react';
-import Header from './Header';
-import Banner from './Banner';
-import SedRound from './SedRound';
-import KeyPoint from './KeyPoint';
-import ChainSupport from './ChainSupport';
-import Feature from './Feature';
-import TokenNomic from './TokenNomic';
-import Distribute from './Distribute';
-import RoadMap from './RoadMap';
-import Team from './Team';
-import Backer from './Backer';
-import Footer from './Footer';
+
 import Wallet from './Wallet';
 import Dapp from './Dapp';
 import AccessCode from './AccessCode';
+import {  BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './Home';
+import Exchange from './Exchange';
+import NFTMarketPlace from './NFTMarketPlace';
 
 export default function App() {
     return (
         <>
-            <div className="GamfiBody">
-
-                <section className="loader_first">
-                    <div className="circular-spinner"></div>
-                </section>
-
-                {/* header */}
-                <Header/>
-                {/* banner */}
-                <Banner/>
-                {/* sedRound */}
-                <SedRound/>
-                {/* keypoint */}
-                <KeyPoint/>
-                {/* chainSupport */}
-                <ChainSupport/>
-                {/* feature */}
-                <Feature/>
-                {/* tokennomic */}
-                <TokenNomic/>
-                {/* distribute */}
-                <Distribute/>
-                {/* roadmap */}
-                <RoadMap/>
-                {/* team  */}
-                <Team/>
-                {/* backer */}
-                <Backer/>
-
-                {/* footer */}
-                <Footer/>
-            </div>
-
+        <BrowserRouter>
+          <Routes>
+           <Route path="/" element={ <Home/> }>
+            </Route>
+            <Route path="/exchange" element={ <Exchange/> }>
+            </Route>
+            <Route path="/marketplace" element={ <NFTMarketPlace/> }>
+            </Route>
+            </Routes>
+        </BrowserRouter>
             {/* wallet */}
             <Wallet/>
             {/* Dapp */}

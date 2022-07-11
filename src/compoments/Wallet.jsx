@@ -1,4 +1,6 @@
 import React from "react";
+import metaMask from '../client-side/earntoken/assets/images/icons/meta-mask.png'
+import trust from '../client-side/earntoken/assets/images/icons/trust.png'
 
 export default function Wallet() {
     return(
@@ -15,10 +17,10 @@ export default function Wallet() {
                             <div className="connect-section">
                                 <ul className="heading-list">
                                     <li><a id="wallet-connect-metamask" href="index.html"><span><img
-                                        src="client-side/earntoken/assets/images/icons/meta-mask.png"
+                                        src={metaMask}
                                         alt="Meta" /></span>MetaMask</a></li>
                                     <li><a href="index.html" id="wallet-connect-trust"><span><img
-                                        src="client-side/earntoken/assets/images/icons/trust.png"
+                                        src={trust}
                                         alt="Trust" /></span>Trust Wallet</a></li>
                                 </ul>
                             </div>

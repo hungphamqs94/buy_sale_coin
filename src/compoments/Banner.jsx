@@ -1,4 +1,21 @@
 import React from "react";
+import dollar from '../client-side/earntoken/assets/images/icons/dollar-dollar-color.svg'
+import rocket from '../client-side/earntoken/assets/images/icons/rocket-dynamic-color.svg'
+import logoBsc from '../images/logo-partner/logo-bscscan-white.svg'
+import buyToken1 from '../client-side/earntoken/assets/images/homeV2/buyTokenlogo1.png'
+import buyToken2 from '../client-side/earntoken/assets/images/homeV2/buyTokenlogo2.png'
+import buyToken3 from '../client-side/earntoken/assets/images/homeV2/buyTokenlogo3.png'
+import buyToken4 from '../client-side/earntoken/assets/images/homeV2/buyTokenlogo4.png'
+import banner7 from '../images/banner/banner7.png'
+import step from '../client-side/earntoken/assets/images/icons/steps.png'
+import Blockchain1 from '../client-side/earntoken/assets/images/icons/BlockChain1.png'
+import Blockchain2 from '../client-side/earntoken/assets/images/icons/BlockChain2.png'
+import Blockchain3 from '../client-side/earntoken/assets/images/icons/BlockChain3.png'
+import Blockchain4 from '../client-side/earntoken/assets/images/icons/BlockChain4.png'
+import Blockchain5 from '../client-side/earntoken/assets/images/icons/BlockChain5.png'
+import Blockchain6 from '../client-side/earntoken/assets/images/icons/BlockChain6.png'
+import UFO from '../client-side/earntoken/assets/images/homeV3/uFO.png';
+
 
 export default function Banner() {
     return (
@@ -12,19 +29,19 @@ export default function Banner() {
                                             style={{visibility: "visible", animationDuration: "0.6s", animationDelay: "0.4s", animationName: "fadeInUp"}}>
                                             <span className="text-glitch">FBS DeFi</span><br />is a decentralized financial
                                             <span>
-                                                <img src="client-side/earntoken/assets/images/icons/dollar-dollar-color.svg"
+                                                <img src={dollar}
                                                     alt="" className="img-fluid" />
                                             </span> infrastructure<br />
                                             on <span className="text-warning text-glow">BSC BEP20</span>
                                             <span>
-                                                <img src="client-side/earntoken/assets/images/icons/rocket-dynamic-color.svg"
+                                                <img src={rocket}
                                                     alt="" className="img-fluid" />
                                             </span>
                                         </h2>
                                         <p className="lead text-glitch"
                                             style={{color:"#fff", fontFamily:' Bergern, Poppins,Sans-serif', fontSize:"15px", fontWeight:600, letterSpacing: '5.7px', marginBottom:'-7px', paddingLeft:'29px'}}>
                                             POWERED BY</p>
-                                        <p className="lead"><img src="images/logo-partner/logo-bscscan-white.svg" style={{width: '187px'}} alt='logo'/></p>
+                                        <p className="lead"><img src={logoBsc} style={{width: '187px'}} alt='logo'/></p>
                                         <div className="gamfi_V2_hero_Btns wow fadeInUp" data-wow-delay="0.6s"
                                             data-wow-duration="0.8s"
                                             style={{visibility: 'visible', animationDuration: '0.8s', animationDelay: '0.6s', animationName: 'fadeInUp'}}>
@@ -57,16 +74,16 @@ export default function Banner() {
                                             <h6>BUY TOKEN ON</h6>
                                             <ul>
                                                 <li><a href="index.html"><img
-                                                    src="client-side/earntoken/assets/images/homeV2/buyTokenlogo1.png"
+                                                    src={buyToken1}
                                                     alt="logo" className="img-fluid" /></a></li>
                                                 <li><a href="index.html"><img
-                                                    src="client-side/earntoken/assets/images/homeV2/buyTokenlogo2.png"
+                                                     src={buyToken2}
                                                     alt="logo" className="img-fluid" /></a></li>
                                                 <li><a href="index.html"><img
-                                                    src="client-side/earntoken/assets/images/homeV2/buyTokenlogo3.png"
+                                                     src={buyToken3}
                                                     alt="logo" className="img-fluid" /></a></li>
                                                 <li className="m-0"><a href="index.html"><img
-                                                    src="client-side/earntoken/assets/images/homeV2/buyTokenlogo4.png"
+                                                     src={buyToken4}
                                                     alt="logo" className="img-fluid" /></a></li>
                                             </ul>
                                         </div>
@@ -75,7 +92,7 @@ export default function Banner() {
                                 <div className="col-md-6">
                                     <div className="sc_banner_V3_right">
                                         <div className="Animetion_Avater">
-                                            <img src="images/banner/banner7.png" width="450" alt="img" className="img-fluid" />
+                                            <img src={banner7} width="450" alt="img" className="img-fluid" />
                                         </div>
                                         <ul>
                                             <li>
@@ -101,7 +118,7 @@ export default function Banner() {
                             <div className="row">
                                 <div className="col-md-6">
                                     <div className="Multi_Block_Chains_Left">
-                                        <h3>Supported <span><img src="client-side/earntoken/assets/images/icons/steps.png" alt="Steps" className="img-fluid" /></span></h3>
+                                        <h3>Supported <span><img src={step} alt="Steps" className="img-fluid" /></span></h3>
                                         <h3>Multi - Block Chains</h3>
                                     </div>
                                 </div>
@@ -111,30 +128,30 @@ export default function Banner() {
                                             <div className="gamfi-partner-inner Multi_Block_Chains_RightContent">
                                                 <div className="partner-image">
                                                     <a href="index.html"><img
-                                                        src="client-side/earntoken/assets/images/icons/BlockChain1.png"
+                                                        src={Blockchain1}
                                                         alt="icon" className="img-fluid" /></a>
                                                     <a href="index.html"><img
-                                                        src="client-side/earntoken/assets/images/icons/BlockChain2.png"
+                                                        src={Blockchain2}
                                                         alt="icon" className="img-fluid" /></a>
                                                     <a href="index.html"><img
-                                                        src="client-side/earntoken/assets/images/icons/BlockChain3.png"
+                                                        src={Blockchain3}
                                                         alt="icon" className="img-fluid" /></a>
                                                     <a href="index.html"><img
-                                                        src="client-side/earntoken/assets/images/icons/BlockChain4.png"
+                                                        src={Blockchain4}
                                                         alt="icon" className="img-fluid" /></a>
                                                 </div>
                                                 <div className="partner-image">
                                                     <a href="index.html"><img
-                                                        src="client-side/earntoken/assets/images/icons/BlockChain5.png"
+                                                        src={Blockchain5}
                                                         alt="icon" className="img-fluid" /></a>
                                                     <a href="index.html"><img
-                                                        src="client-side/earntoken/assets/images/icons/BlockChain6.png"
+                                                        src={Blockchain6}
                                                         alt="icon" className="img-fluid" /></a>
                                                     <a href="index.html"><img
-                                                        src="client-side/earntoken/assets/images/icons/BlockChain3.png"
+                                                        src={Blockchain3}
                                                         alt="icon" className="img-fluid" /></a>
                                                     <a href="index.html"><img
-                                                        src="client-side/earntoken/assets/images/icons/BlockChain2.png"
+                                                        src={Blockchain2}
                                                         alt="icon" className="img-fluid" /></a>
                                                 </div>
                                             </div>
@@ -148,7 +165,7 @@ export default function Banner() {
                     </div>
                     <div className="Ufo_Img wow slideInLeft" data-wow-delay="300ms" data-wow-duration="2500ms"
                         style={{visibility: 'visible', animationDuration: '2500ms', animationDelay: '300ms', animationName: 'slideInLeft'}}>
-                        <img src="client-side/earntoken/assets/images/homeV3/uFO.png" alt="ufo" className="img-fluid" />
+                        <img src={UFO} alt="ufo" className="img-fluid" />
                     </div>
                 </div>
     )

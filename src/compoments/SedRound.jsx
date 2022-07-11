@@ -1,4 +1,11 @@
 import React from "react";
+import step from '../client-side/earntoken/assets/images/icons/steps.png'
+import iconCheck from '../client-side/earntoken/assets/images/icons/icon-Check.svg'
+import One from '../client-side/earntoken/assets/images/icons/One.svg'
+import Two from '../client-side/earntoken/assets/images/icons/two.svg'
+import Three from '../client-side/earntoken/assets/images/icons/three.svg'
+import lock from '../client-side/earntoken/assets/images/icons/locker-dynamic-color.png';
+import earthBg from '../client-side/earntoken/assets/images/icons/earthBg.svg'
 
 export default function SedRound() {
     return (
@@ -10,7 +17,7 @@ export default function SedRound() {
                                     <div className="sec-heading">
                                         <div className="sub-inner mb-15">
                                             <span className="sub-title text-white text-glitch">3 EASY STEPS</span>
-                                            <img className="heading-left-image" src="client-side/earntoken/assets/images/icons/steps.png" alt="Steps" />
+                                            <img className="heading-left-image" src={step} alt="Steps" />
                                         </div>
                                         <h2 className="title text-warning text-glow">Seed Round Policy</h2>
                                     </div>
@@ -19,31 +26,31 @@ export default function SedRound() {
                                             <ul>
                                                 <li>
                                                     <span>
-                                                        <img src="client-side/earntoken/assets/images/icons/icon-Check.svg" alt='logo' className="img-fluid" />
+                                                        <img src={iconCheck} alt='logo' className="img-fluid" />
                                                     </span><strong>Price:</strong> <strong className="text-danger ml-5">
                                                         $0.02</strong>
                                                 </li>
                                                 <li>
                                                     <span>
-                                                        <img src="client-side/earntoken/assets/images/icons/icon-Check.svg" alt='logo' className="img-fluid" />
+                                                        <img src={iconCheck} alt='logo' className="img-fluid" />
                                                     </span><strong>Total Sale:</strong> <strong className="text-success ml-5">
                                                         25,000,000</strong>
                                                 </li>
                                                 <li>
                                                     <span>
-                                                        <img src="client-side/earntoken/assets/images/icons/icon-Check.svg" alt='logo' className="img-fluid" />
+                                                        <img src={iconCheck} alt='logo' className="img-fluid" />
                                                     </span><strong>Min Buy:</strong> <strong className="text-warning ml-5"> 0.1
                                                         BNB</strong>
                                                 </li>
                                                 <li>
                                                     <span>
-                                                        <img src="client-side/earntoken/assets/images/icons/icon-Check.svg" alt='logo' className="img-fluid" />
+                                                        <img src={iconCheck} alt='logo' className="img-fluid" />
                                                     </span><strong>Max Buy:</strong> <strong className="text-warning ml-5"> 50
                                                         BNB</strong>
                                                 </li>
                                                 <li>
                                                     <span>
-                                                        <img src="client-side/earntoken/assets/images/icons/icon-Check.svg" alt='logo' className="img-fluid" />
+                                                        <img src={iconCheck} alt='logo' className="img-fluid" />
                                                     </span><strong>Supports payment by BNB of BEP20 network on Metamask wallet
                                                         or Trust wallet</strong>
                                                 </li>
@@ -66,7 +73,7 @@ export default function SedRound() {
                                     <div className="How_to_Participate_right_Card How_to_Participate_right_Card1 wow fadeInRight"
                                         data-wow-delay="0.2s" data-wow-duration="0.4s">
                                         <div className="How_to_Participate_right_Card_number">
-                                            <img src="client-side/earntoken/assets/images/icons/One.svg" alt="img"
+                                            <img src={One} alt="img"
                                                 className="img-fluid" />
                                         </div>
                                         <div className="How_to_Participate_right_CardText">
@@ -78,7 +85,7 @@ export default function SedRound() {
                                     <div className="How_to_Participate_right_Card How_to_Participate_right_Card2 wow fadeInRight"
                                         data-wow-delay="0.3s" data-wow-duration="0.5s">
                                         <div className="How_to_Participate_right_Card_number">
-                                            <img src="client-side/earntoken/assets/images/icons/two.svg" alt="img"
+                                            <img src={Two} alt="img"
                                                 className="img-fluid" />
                                         </div>
                                         <div className="How_to_Participate_right_CardText">
@@ -89,7 +96,7 @@ export default function SedRound() {
                                     <div className="How_to_Participate_right_Card How_to_Participate_right_Card3 wow fadeInRight"
                                         data-wow-delay="0.4s" data-wow-duration="0.6s">
                                         <div className="How_to_Participate_right_Card_number">
-                                            <img src="client-side/earntoken/assets/images/icons/three.svg" alt="img"
+                                            <img src={Three} alt="img"
                                                 className="img-fluid" />
                                         </div>
                                         <div className="How_to_Participate_right_CardText">
@@ -103,12 +110,12 @@ export default function SedRound() {
                             </div>
                         </div>
                         <div className="lockerImg">
-                            <img src="client-side/earntoken/assets/images/icons/locker-dynamic-color.png" alt="img"
+                            <img src={lock} alt="img"
                                 className="img-fluid" />
                         </div>
                     </div>
                     <div className="moon_imgBg">
-                        <img src="client-side/earntoken/assets/images/icons/earthBg.svg" alt="img" className="img-fluid" />
+                        <img src={earthBg} alt="img" className="img-fluid" />
                     </div>
                 </div>
     )

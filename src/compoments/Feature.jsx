@@ -1,4 +1,5 @@
 import React from "react";
+import step from '../client-side/earntoken/assets/images/icons/steps.png';
 
 export default function Feature() {
     <div className="SCALEANDPOWER">
@@ -31,7 +32,7 @@ export default function Feature() {
                                     <div className="sub-inner mb-15">
                                         <span className="sub-title text-white text-glitch">feature</span>
                                         <img className="heading-left-image"
-                                            src="client-side/earntoken/assets/images/icons/steps.png" alt="Steps" />
+                                            src={step} alt="Steps" />
                                     </div>
                                     <h2 className="title mb-0 text-warning text-glow mb-5">Scale and Power</h2>
                                 </div>

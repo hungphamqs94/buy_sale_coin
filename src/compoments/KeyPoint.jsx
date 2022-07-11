@@ -1,4 +1,10 @@
 import React from "react";
+import step from "../client-side/earntoken/assets/images/icons/steps.png"
+import eth from "../images/ETHCompatibility.png"
+import security from "../images/Security.png"
+import Scalability from "../images/Scalability.png"
+import PersonTeam from "../images/PersonTeam.png"
+import Partnerships from "../images/Partnerships.png"
 
 export default function KeyPoint() {
     return (
@@ -8,7 +14,7 @@ export default function KeyPoint() {
                             <div className="sec-heading">
                                 <div className="sub-inner mb-15">
                                     <span className="sub-title text-white">Key Points</span>
-                                    <img className="heading-left-image" src="client-side/earntoken/assets/images/icons/steps.png" alt="Steps" />
+                                    <img className="heading-left-image" src={step} alt="Steps" />
                                 </div>
                                 <h2 className="title text-warning text-glow">Why FBS DeFi</h2>
                             </div>
@@ -17,7 +23,7 @@ export default function KeyPoint() {
                                     <div className="col-md-4 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.4s">
                                         <div className="Key_Points_Items">
                                             <div className="Key_Points_Item_img">
-                                                <img src="images/ETHCompatibility.png" alt="icon" className="img-fluid" />
+                                                <img src={eth} alt="icon" className="img-fluid" />
                                             </div>
                                             <div className="Key_Points_Item_Text">
                                                 <h3 className="text-glitch">ETH Compatibility</h3>
@@ -29,7 +35,7 @@ export default function KeyPoint() {
                                     <div className="col-md-4 wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="0.5s">
                                         <div className="Key_Points_Items">
                                             <div className="Key_Points_Item_img">
-                                                <img src="images/Security.png" alt="icon" className="img-fluid" />
+                                                <img src={security} alt="icon" className="img-fluid" />
                                             </div>
                                             <div className="Key_Points_Item_Text">
                                                 <h3 className="text-glitch">Security</h3>
@@ -41,7 +47,7 @@ export default function KeyPoint() {
                                     <div className="col-md-4 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.6s">
                                         <div className="Key_Points_Items">
                                             <div className="Key_Points_Item_img">
-                                                <img src="images/Scalability.png" alt="icon" className="img-fluid" />
+                                                <img src={Scalability} alt="icon" className="img-fluid" />
                                             </div>
                                             <div className="Key_Points_Item_Text">
                                                 <h3 className="text-glitch">Scalability</h3>
@@ -68,7 +74,7 @@ export default function KeyPoint() {
                                     <div className="col-md-4 wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="0.7s">
                                         <div className="Key_Points_Items">
                                             <div className="Key_Points_Item_img">
-                                                <img src="images/PersonTeam.png" alt="icon" className="img-fluid" />
+                                                <img src={PersonTeam} alt="icon" className="img-fluid" />
                                             </div>
                                             <div className="Key_Points_Item_Text">
                                                 <h3 className="text-glitch">30+ Person Team</h3>
@@ -82,7 +88,7 @@ export default function KeyPoint() {
                                     <div className="col-md-4 wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="0.7s">
                                         <div className="Key_Points_Items">
                                             <div className="Key_Points_Item_img">
-                                                <img src="images/Partnerships.png" alt="icon" className="img-fluid" />
+                                                <img src={Partnerships} alt="icon" className="img-fluid" />
                                             </div>
                                             <div className="Key_Points_Item_Text">
                                                 <h3 className="text-glitch">Extensive partnerships</h3>

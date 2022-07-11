@@ -1,4 +1,7 @@
 import React from "react";
+import stepTwo from "../client-side/earntoken/assets/images/icons/steps2.png"
+import step from "../client-side/earntoken/assets/images/icons/steps.png"
+import tokenLogo from "../images/tokenlogo.png"
 
 export default function Footer() {
     return (
@@ -7,10 +10,10 @@ export default function Footer() {
                         <div className="container">
                             <div className="sec-heading text-center">
                                 <div className="sub-inner mb-52 mb-mb-30">
-                                    <img className="heading-right-image" src="client-side/earntoken/assets/images/icons/steps2.png"
+                                    <img className="heading-right-image" src={stepTwo}
                                         alt="Steps" />
                                     <span className="sub-title white-color">Find us on Social</span>
-                                    <img className="heading-left-image" src="client-side/earntoken/assets/images/icons/steps.png"
+                                    <img className="heading-left-image" src={step}
                                         alt="Steps" />
                                 </div>
                             </div>
@@ -26,7 +29,7 @@ export default function Footer() {
                                 </ul>
                             </div>
                             <div className="footer-logo text-center mb-45">
-                                <img src="images/tokenlogo.png" width="350" alt="Footer-logo" />
+                                <img src={tokenLogo} width="350" alt="Footer-logo" />
                             </div>
                             <div className="footer-mainmenu text-center mb-20">
                                 <ul>

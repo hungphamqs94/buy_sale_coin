@@ -60,6 +60,14 @@
      timeoutBlocks: 200,
      skipDryRun: true,
    },
+   testnet: {
+      provider: () => new HDWalletProvider(process.env.MNEMONIC, `https://data-seed-prebsc-1-s2.binance.org:8545`),
+      network_id: 97, // 3 for ropsten, 97 for bsc test
+      confirmations: 2,
+      timeoutBlocks: 2000,
+      skipDryRun: true,
+      networkCheckTimeout: 1000000
+   },
  };
  exports.mocha = {
    // timeout: 100000

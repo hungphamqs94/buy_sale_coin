@@ -1,6 +1,52 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import imageLogo from "../images/logo.png";
+import imageConnect from '../client-side/earntoken/assets/images/icons/connect.png';
 
 export default function Header() {
+
+    const [currentAccount, setCurrentAccount] = useState(null);
+
+    const checkWalletIsConnected = async () => {
+        const { ethereum } = window;
+    
+        if (!ethereum) {
+          console.log("Make sure you have Metamask installed!");
+          return;
+        } else {
+          console.log("Wallet exists! We're ready to go!")
+        }
+    
+        const accounts = await ethereum.request({ method: 'eth_accounts' });
+    
+        if (accounts.length !== 0) {
+          const account = accounts[0];
+          console.log("Found an authorized account: ", account);
+        //   setCurrentAccount(account);
+        } else {
+          console.log("No authorized account found");
+        }
+    }
+
+    const connectWalletHandler = async () => {
+        const { ethereum } = window;
+    
+        if (!ethereum) {
+          alert("Please install Metamask!");
+        }
+    
+        try {
+          const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+          console.log("Found an account! Address: ", accounts[0]);
+          setCurrentAccount(accounts[0]);
+        } catch (err) {
+          console.log(err)
+        }
+    }
+
+    useEffect(() => {
+        checkWalletIsConnected();
+    }, [])
+
     return (
         <header id="gamfi-header" className="gamfi-header-section transparent-header">
                     <div className="menu-area menu-sticky">
@@ -9,7 +55,7 @@ export default function Header() {
                                 <div className="gamfi-logo-area d-flex justify-content-between align-items-center">
                                     <div className="logo">
                                         <a href="index.html">
-                                            <img src="images/tokenlogo.png" width="200" alt="logo" />
+                                            <img src={imageLogo} width="200" alt="logo" />
                                         </a>
                                     </div>
                                     <div className="header-menu">
@@ -70,8 +116,8 @@ export default function Header() {
                                         <li>
                                             <button type="button" className="readon white-btn hover-shape btnConnectWallet"
                                                 data-bs-toggle="modal" data-bs-target="#WalletConnect">
-                                                <img src="client-side/earntoken/assets/images/icons/connect.png" alt="Icon" />
-                                                <span className="btn-text">Connect </span>
+                                                <img src={imageConnect} alt="Icon" />
+                                                <span className="btn-text" onClick={connectWalletHandler}>Connect </span>
                                                 <span className="hover-shape1"></span>
                                                 <span className="hover-shape2"></span>
                                                 <span className="hover-shape3"></span>
@@ -93,7 +139,7 @@ export default function Header() {
                             </a>
                         </div>
                         <div className="sidebar-logo mb-30">
-                            <a href="index-2.html"><img src="images/tokenlogo.png" width="200" alt="" /></a>
+                            <a href="index-2.html"><img src={imageLogo} width="200" alt="" /></a>
                         </div>
                         <ul className="nav-menu">
                             <li>
@@ -131,8 +177,8 @@ export default function Header() {
                             <li>
                                 <button type="button" className="btnConnectWallet readon black-shape-big connectWalletBtnforMobile"
                                     data-bs-toggle="modal" data-bs-target="#WalletConnect">
-                                    <img src="client-side/earntoken/assets/images/icons/connect_white.png" alt="Icon" />
-                                    <span className="btn-text">Connect </span>
+                                    <img src={imageConnect} alt="Icon" />
+                                    <span className="btn-text" onClick={connectWalletHandler}>Connect </span>
                                     <span className="hover-shape1"></span>
                                     <span className="hover-shape2"></span>
                                     <span className="hover-shape3"></span>

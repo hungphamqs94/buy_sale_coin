@@ -1,4 +1,5 @@
 import React from "react";
+import step from '../client-side/earntoken/assets/images/icons/steps.png'
 
 export default function RoadMap() {
     return (
@@ -11,7 +12,7 @@ export default function RoadMap() {
                                     <div className="sub-inner mb-15">
                                         <span className="sub-title text-white text-glitch">OUR GOALS </span>
                                         <img className="heading-left-image"
-                                            src="client-side/earntoken/assets/images/icons/steps.png" alt="Steps" />
+                                            src={step} alt="Steps" />
                                     </div>
                                     <h2 className="title mb-0 text-warning text-glow">Roadmap</h2>
                                 </div>
