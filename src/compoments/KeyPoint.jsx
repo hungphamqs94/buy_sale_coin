@@ -64,9 +64,9 @@ export default function KeyPoint() {
                                             </div>
                                             <div className="Key_Points_Item_Text">
                                                 <h3 className="text-glitch">High mining productivity</h3>
-                                                <p>FBS DeFi PoS is a layer 2 scaling solution that achieves unprecedented
+                                                <p>XGA PoS is a layer 2 scaling solution that achieves unprecedented
                                                     transaction speed and cost savings by utilizing side-chains for transaction
-                                                    processing. Profit from 20% to 25% per month, specially profit paided by FBS
+                                                    processing. Profit from 20% to 25% per month, specially profit paided by XGA
                                                     Token</p>
                                             </div>
                                         </div>
@@ -78,7 +78,7 @@ export default function KeyPoint() {
                                             </div>
                                             <div className="Key_Points_Item_Text">
                                                 <h3 className="text-glitch">30+ Person Team</h3>
-                                                <p>30+ person team with deep resources and proven track record. FBS DeFi is run
+                                                <p>30+ person team with deep resources and proven track record. XGA is run
                                                     by a fully integrated team with a long term vision, and core team members
                                                     have built successful blockchain projects and have experience at leading
                                                     blue-chip consulting and finance institutions</p>

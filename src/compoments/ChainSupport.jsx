@@ -32,7 +32,7 @@ export default function ChainSupport() {
                                 </div>
                                 <div className="Multi_Chain_Support_right_Content">
                                     <p>
-                                        FBS DeFi provides the foundational building layers for
+                                        XGA provides the foundational building layers for
                                         a new digital economy with following products: stable-coin, crypto/fiat,
                                         DEX, launchpad, lock liquidity and lock token and connecting crypto to the real
                                         world.

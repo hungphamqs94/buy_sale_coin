@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import imageLogo from "../images/logo.png";
+import Web3 from 'web3';
 import imageConnect from '../client-side/earntoken/assets/images/icons/connect.png';
 
 export default function Header() {
@@ -35,9 +36,14 @@ export default function Header() {
         }
     
         try {
-          const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-          console.log("Found an account! Address: ", accounts[0]);
-          setCurrentAccount(accounts[0]);
+            const web3 = window.web3
+            const accounts = await web3.eth.getAccounts()
+            if (accounts.length !== 0) {
+                const account = accounts[0];
+                setCurrentAccount(account);
+            } else {
+                console.log("No authorized account found");
+            }
         } catch (err) {
           console.log(err)
         }

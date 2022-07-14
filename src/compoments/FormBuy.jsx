@@ -2,34 +2,40 @@ import React, { useEffect, useState } from "react";
 import step from '../client-side/earntoken/assets/images/icons/steps.png';
 import tokenIcon from '../images/tokeniconfb.png';
 import { ethers } from "ethers";
+import Web3 from 'web3'
+import contract from '../contracts/TokenSale.json';
+
+const contractAddress = "0x14f86A498E5838228CE56d53D34C91763691A217";
+const abi = contract.abi;
 
 export default function FormBuy() {
 
     const [currentAccount, setCurrentAccount] = useState(null);
     const [currentBalance, setCurrentBalance] = useState(null);
+    const [contract, setContract] = useState(null);
     const [swapValue, setSwapValue] = useState(0)
 
     const checkWalletIsConnected = async () => {
-        const { ethereum } = window;
-    
-        if (!ethereum) {
-          console.log("Make sure you have Metamask installed!");
-          return;
-        } else {
-          console.log("Wallet exists! We're ready to go!")
+        if (window.ethereum) {
+          window.web3 = new Web3(window.ethereum)
+          await window.ethereum.enable()
         }
-    
-        const accounts = await ethereum.request({ method: 'eth_accounts' });
-    
+        else if (window.web3) {
+          window.web3 = new Web3(window.web3.currentProvider)
+        }
+        else {
+          window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
+        }
+    }
+
+    const loadBalanceAccount = async () => {
+        const web3 = window.web3
+        const accounts = await web3.eth.getAccounts()
         if (accounts.length !== 0) {
             const account = accounts[0];
-            console.log("Found an authorized account: ", account);
+            console.log("Found an authorized account: ", web3.utils.fromWei(await web3.eth.getBalance(account), 'ether'));
             setCurrentAccount(account);
-            const provider = new ethers.providers.Web3Provider(window.ethereum)
-
-            const ethbalance = await provider.getBalance(account);
-            const balanceInEth = ethers.utils.formatEther(ethbalance);
-            setCurrentBalance(balanceInEth)  
+            setCurrentBalance(web3.utils.fromWei(await web3.eth.getBalance(account), 'ether'))  
         } else {
           console.log("No authorized account found");
         }
@@ -37,10 +43,22 @@ export default function FormBuy() {
 
     useEffect(() => {
         checkWalletIsConnected();
+        loadBalanceAccount();
     }, [])
 
     const buyIDOXGA = async () => {
-
+        try {
+            const web3 = window.web3
+            const contract = new web3.eth.Contract(abi, contractAddress)
+            setContract(contract)
+            console.log('value of', swapValue)
+            contract.methods.buyTokensSeedRound(1).send({ from: currentAccount, value: web3.utils.toWei(swapValue, "ether") })
+            .once('receipt', (receipt) => {
+              console.log(receipt)
+            })
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     return (
@@ -120,3 +138,4 @@ export default function FormBuy() {
         </>
     )
 }
+

@@ -6,7 +6,7 @@ export default function Distribute() {
             <div className="container">
                 <div className="sec-inner align-items-center d-flex justify-content-between  mb-30">
                     <div className="sec-heading">
-                        <h2 className="title mb-0 xs-pb-20">FB DISTRIBUTION</h2>
+                        <h2 className="title mb-0 xs-pb-20">XGA DISTRIBUTION</h2>
                     </div>
                 </div>
                 <div className="TokenomicsTable">
